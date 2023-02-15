@@ -185,6 +185,9 @@
 #include "../usermods/pwm_outputs/usermod_pwm_outputs.h"
 #endif
 
+#ifdef USERMOD_RTC_DS3231
+#include "../usermods/usermod_v2_rtc_ds3231/usermod_v2_rtc_ds3231.h"
+#endif
 
 void registerUsermods()
 {
@@ -348,5 +351,9 @@ void registerUsermods()
 
   #ifdef USERMOD_SHT
   usermods.add(new ShtUsermod());
+  #endif
+
+  #ifdef USERMOD_RTC_DS3231
+  usermods.add(new RTCDS3231Usermod());
   #endif
 }
