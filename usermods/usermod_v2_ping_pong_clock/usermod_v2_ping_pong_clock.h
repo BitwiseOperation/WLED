@@ -20,8 +20,8 @@ private:
 
   int baseH = 43;  // Adress for the one place of the hours
   int baseHH = 7;  // Adress for the tens place of the hours
-  int baseM = 133; // Adress for the one place of the minutes
-  int baseMM = 97; // Adress for the tens place of the minutes
+  int baseM = 97; // Adress for the one place of the minutes
+  int baseMM = 133; // Adress for the tens place of the minutes
   int colon1 = 79; // Adress for the first colon led
   int colon2 = 80; // Adress for the second colon led
 
@@ -61,7 +61,7 @@ public:
 
     JsonArray lightArr = user.createNestedArray("Uhrzeit-Anzeige"); //name
     lightArr.add(pingPongClockEnabled ? "aktiv" : "inaktiv"); //value
-    lightArr.add(""); //unit
+    lightArr.add(" "); //unit
   }
 
   void addToConfig(JsonObject &root)
