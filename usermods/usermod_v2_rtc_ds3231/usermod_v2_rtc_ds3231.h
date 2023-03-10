@@ -65,11 +65,11 @@ public:
 
     JsonArray rtcArr = user.createNestedArray("Real-Time Clock");
     rtcArr.add(rtcEnabled ? "aktiv" : "inaktiv");
-    rtcArr.add("");
+    rtcArr.add(" ");
     
     JsonArray rtcErrorArr = user.createNestedArray("Real-Time Clock Error");
     rtcErrorArr.add(rtcError);
-    rtcErrorArr.add("");
+    rtcErrorArr.add(" ");
   }
 
   void addToConfig(JsonObject &root)
